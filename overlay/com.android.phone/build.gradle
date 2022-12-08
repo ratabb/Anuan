@@ -1,0 +1,13 @@
+plugins {
+    id 'com.android.application'
+}
+apply from: rootDir.path + '/common_build.gradle'
+
+android {
+    namespace 'com.android.phone.fake.overlay'
+    // Minimal set-up
+    sourceSets.main {
+        manifest.srcFile 'AndroidManifest.xml'
+        res.srcDirs 'res'
+    }
+}

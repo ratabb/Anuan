@@ -1,0 +1,17 @@
+android {
+    compileSdk rootProject.androidCompileSdk as Integer
+    defaultConfig {
+        applicationId android.namespace
+        minSdk rootProject.androidMinSdk as Integer
+        targetSdk rootProject.androidTargetSdk as Integer
+
+        versionCode 1
+        versionName '1.0.0'
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    // SimpleCity to signing using default android keystore
+    buildTypes.release.signingConfig = signingConfigs.debug
+}
